@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk Kustom</title>
+    <style>
+        :root {
+            --dark: #0d0d0d;
+            --card: #1a1a1a;
+            --orange: #ff6600;
+            --yellow: #ffcc00;
+            --text: #ffffff;
+        }
+
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: var(--dark); 
+            color: var(--text);
+            margin: 0; padding: 20px; 
+        }
+
+        .container { max-width: 1100px; margin: auto; }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            border-bottom: 4px solid var(--orange);
+            margin-bottom: 40px;
+        }
+
+        h1 { color: var(--yellow); letter-spacing: 2px; }
+
+        h2 { 
+            color: var(--orange); 
+            text-transform: uppercase; 
+            border-left: 5px solid var(--yellow); 
+            padding-left: 15px;
+            margin-top: 40px;
+        }
+
+        h3 { color: var(--yellow); margin-left: 10px; }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-top: 20px;
+        }
+
+        .card { 
+            background: var(--card); 
+            border-radius: 15px; 
+            border: 1px solid #333;
+            overflow: hidden; 
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--orange);
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+        }
+
+        .img-box {
+            width: 100%;
+            height: 250px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .img-box img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            object-position: center;
+        }
+
+        .img-box.contain img { 
+            object-fit: contain; 
+            padding: 15px; 
+        }
+
+        .card-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+
+        .card-info h4 { margin: 0 0 10px; font-size: 1.3em; }
+
+        .price { 
+            color: var(--yellow); 
+            font-weight: bold; 
+            font-size: 1.5em; 
+            display: block;
+            margin-bottom: 15px;
+            margin-top: auto;
+        }
+
+        .btn {
+            background: var(--orange);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            display: block;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn:hover { background: var(--yellow); color: black; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>KATALOG PRODUK KAMI</h1>
+    </header>
+
+    <h2>Kategori: Kuliner</h2>
+
+    <h3>1. Makanan</h3>
+    <div class="grid">
+        <div class="card">
+            <div class="img-box">
+                <img src="https://cdn.phototourl.com/free/2026-05-13-3a535890-09b5-47c0-9092-3c5ef162407b.jpg" alt="Dimsum">
+            </div>
+            <div class="card-info">
+                <h4>Dimsum Ayam</h4>
+                <span class="price">Rp 10.000 <small>(3 pcs)</small></span>
+                <a href="https://wa.me/6283867487474?text=Halo%2C%20saya%20ingin%20memesan%20Dimsum%20Ayam" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-box">
+                <img src="https://cdn.phototourl.com/free/2026-05-13-815d6b9c-1d86-48cf-99ac-77ddfc440f64.jpg" alt="Jamur Crispy">
+            </div>
+            <div class="card-info">
+                <h4>Jamur Crispy</h4>
+                <span class="price">Rp 5.000</span>
+                <a href="https://wa.me/6283867487474?text=Halo%2C%20saya%20ingin%20memesan%20Jamur%20Crispy" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+    </div>
+
+    <h3>2. Minuman</h3>
+    <div class="grid">
+        <div class="card">
+            <div class="img-box contain">
+                <img src="https://cdn.phototourl.com/free/2026-05-13-dbb319b3-8eac-4053-8517-874e3c73b11b.png" alt="Es Matcha">
+            </div>
+            <div class="card-info">
+                <h4>Es Matcha Segar</h4>
+                <span class="price">Rp 5.000</span>
+                <a href="https://wa.me/6283867487474?text=Halo%2C%20saya%20ingin%20memesan%20Es%20Matcha%20Segar" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-box contain">
+                <img src="https://cdn.phototourl.com/free/2026-05-13-c124d6dd-c152-4a2b-b3a1-827fc2706b3c.png" alt="Es Coklat">
+            </div>
+            <div class="card-info">
+                <h4>Es Coklat Kental</h4>
+                <span class="price">Rp 5.000</span>
+                <a href="https://wa.me/6283867487474?text=Halo%2C%20saya%20ingin%20memesan%20Es%20Coklat%20Kental" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+    </div>
+
+    <h2>Kategori: Produk Jurusan</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="img-box">
+                <img src="https://cdn.phototourl.com/free/2026-05-13-ab73d174-1452-44f1-8870-5d150dc7d430.jpg" alt="Bakaran Sate">
+            </div>
+            <div class="card-info">
+                <h4>Bakaran Sate</h4>
+                <span class="price">Rp 25.000</span>
+                <a href="https://wa.me/6283867487474?text=Halo%2C%20saya%20ingin%20memesan%20Bakaran%20Sate" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-box">
+                <img src="https://cdn.phototourl.com/free/2026-05-13-3d599267-ed45-4570-a567-b8b6d5b1fb09.jpg" alt="Gantungan Kunci">
+            </div>
+            <div class="card-info">
+                <h4>Gantungan Kunci</h4>
+                <span class="price">Rp 6.000</span>
+                <a href="https://wa.me/6283867487474?text=Halo%2C%20saya%20ingin%20memesan%20Gantungan%20Kunci" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-box">
+                <img src="https://cdn.phototourl.com/free/2026-05-13-9dd6cf32-e28f-43a4-8748-51f9b5612a3b.jpg" alt="Stiker">
+            </div>
+            <div class="card-info">
+                <h4>Stiker</h4>
+                <span class="price">Rp 2.000 <small>(1pcs)</small></span>
+                <a href="https://wa.me/6283867487474?text=Halo%2C%20saya%20ingin%20memesan%20Stiker" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
